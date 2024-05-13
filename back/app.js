@@ -2,11 +2,11 @@ import express from "express";
 import register from "./route/users/register.js";
 import login from "./route/users/login.js";
 import account from "./route/users/account.js";
-import media from './route/media/media.js'
-import plateform from './route/platform/platform.js'
-import rating from './route/rating/rating.js'
-import watchlist from './route/watchlist/watchlist.js'
-import watching from './route/watching/watching.js'
+import media from "./route/media/media.js";
+import plateform from "./route/platform/platform.js";
+import rating from "./route/rating/rating.js";
+import watchlist from "./route/watchlist/watchlist.js";
+import watching from "./route/watching/watching.js";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
