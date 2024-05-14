@@ -2,6 +2,7 @@
 interface _GlobalComponents {
       'UiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
     'UiBtnSecondary': typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
+    'UiHeader': typeof import("../components/ui/header/Header.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -25,6 +26,7 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
       'LazyUiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
     'LazyUiBtnSecondary': typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
+    'LazyUiHeader': typeof import("../components/ui/header/Header.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'LazyNuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -62,6 +64,7 @@ declare module 'vue' {
 
 export const UiBtnPrimary: typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
 export const UiBtnSecondary: typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
+export const UiHeader: typeof import("../components/ui/header/Header.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -85,6 +88,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyUiBtnPrimary: typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
 export const LazyUiBtnSecondary: typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
+export const LazyUiHeader: typeof import("../components/ui/header/Header.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const LazyNuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']

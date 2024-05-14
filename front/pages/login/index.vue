@@ -3,6 +3,7 @@ import btnPrimary from "../../components/ui/btnPrimary";
 </script> -->
 
 <template>
+  <UiHeader></UiHeader>
   <section class="min-h-screen flex justify-center items-center">
     <div
       class="w-full max-w-sm flex flex-col justify-center items-center gap-6"
