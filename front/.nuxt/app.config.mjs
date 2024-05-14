@@ -5,6 +5,31 @@ import { defuFn } from 'defu'
 const inlineConfig = {
   "nuxt": {
     "buildId": "dev"
+  },
+  "ui": {
+    "primary": "green",
+    "gray": "cool",
+    "colors": [
+      "red",
+      "orange",
+      "amber",
+      "yellow",
+      "lime",
+      "green",
+      "emerald",
+      "teal",
+      "cyan",
+      "sky",
+      "blue",
+      "indigo",
+      "violet",
+      "purple",
+      "fuchsia",
+      "pink",
+      "rose",
+      "primary"
+    ],
+    "strategy": "merge"
   }
 }
 
@@ -15,6 +40,6 @@ if (import.meta.hot) {
   })
 }
 
+import cfg0 from "/Users/dan/Desktop/ESD-DAN/MyVod/front/node_modules/@nuxt/ui-pro/app.config.ts"
 
-
-export default /*@__PURE__*/ defuFn(inlineConfig)
+export default /*@__PURE__*/ defuFn(cfg0, inlineConfig)

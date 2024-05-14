@@ -71,6 +71,12 @@
       "public/*": [
         "../public/*"
       ],
+      "#ui-pro": [
+        "../node_modules/@nuxt/ui-pro"
+      ],
+      "#ui-pro/*": [
+        "../node_modules/@nuxt/ui-pro/*"
+      ],
       "#app": [
         "../node_modules/nuxt/dist/app"
       ],
@@ -80,11 +86,44 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
+      "vue3-carousel/dist/carousel": [
+        "../node_modules/vue3-carousel/dist/carousel.es"
+      ],
+      "#ui": [
+        "../node_modules/@nuxt/ui/dist/runtime"
+      ],
+      "#ui/*": [
+        "../node_modules/@nuxt/ui/dist/runtime/*"
+      ],
+      "#ui-colors": [
+        "./ui.colors"
+      ],
+      "#icon-collections": [
+        "./icon-collections"
+      ],
+      "#color-mode-options": [
+        "./color-mode-options.mjs"
+      ],
+      "#mdc-configs": [
+        "./mdc-configs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports"
+      ],
       "#vue-router": [
         "./vue-router-stub"
       ],
       "#imports": [
         "./imports"
+      ],
+      "#tailwind-config": [
+        "./tailwind.config"
+      ],
+      "#tailwind-config/*": [
+        "./tailwind.config/*"
       ],
       "#app-manifest": [
         "./manifest/meta/dev"
@@ -122,6 +161,15 @@
     "./nuxt.d.ts",
     "../.config/nuxt.*",
     "../**/*",
+    "../node_modules/@nuxt/ui-pro/**/*",
+    "../node_modules/@nuxt/ui-pro/modules/pro/runtime",
+    "../node_modules/vue3-carousel-nuxt/runtime",
+    "../node_modules/nuxt-icon/runtime",
+    "../node_modules/@nuxtjs/color-mode/runtime",
+    "../node_modules/@nuxtjs/tailwindcss/runtime",
+    "../node_modules/@nuxt/ui/runtime",
+    "../node_modules/@nuxtjs/mdc/runtime",
+    "../node_modules/@nuxt/content/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
     ".."
@@ -130,6 +178,15 @@
     "../node_modules",
     "../../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxt/ui-pro/modules/pro/node_modules",
+    "../node_modules/@nuxt/ui-pro/modules/pro/runtime/server",
+    "../node_modules/vue3-carousel-nuxt/runtime/server",
+    "../node_modules/nuxt-icon/runtime/server",
+    "../node_modules/@nuxtjs/color-mode/runtime/server",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@nuxt/ui/runtime/server",
+    "../node_modules/@nuxtjs/mdc/runtime/server",
+    "../node_modules/@nuxt/content/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",
