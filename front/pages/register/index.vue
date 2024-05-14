@@ -38,12 +38,8 @@
             </div>
           </div>
 
-          <button
-            class="w-full bg-blue400 text-white p-3 rounded-2xl mt-4 font-semibold transition duration-300 ease-in-out hover:bg-blue-700 hover:shadow-md"
-            type="submit"
-          >
-            Commencer
-          </button>
+          <!-- Bouton Primaire component -->
+          <UiBtnPrimary :btnText="'Commencer'"></UiBtnPrimary>
         </form>
       </div>
     </div>

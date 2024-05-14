@@ -14,6 +14,14 @@ module.exports = {
         blue500: "#0A54C2",
         blue400: "#0066FF",
         textBlack: "#00091A",
+        whiteButton: "#EAEFF5",
+      },
+      boxShadow: {
+        blue: "0 4px 13px 0 rgba(0, 102, 255, 0.55)",
+      },
+
+      padding: {
+        2.5: "10px",
       },
     },
   },
