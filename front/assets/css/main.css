@@ -6,5 +6,8 @@
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: #00091A; 
-    
+}
+
+.carousel__viewport {
+    height: 100%;
 }

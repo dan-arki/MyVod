@@ -32,6 +32,14 @@ import btnPrimary from "../../components/ui/btnPrimary";
           <!-- Bouton Primaire component -->
           <UiBtnPrimary :btnText="'Continuer'" size="medium"></UiBtnPrimary>
         </form>
+        <div class="flex gap-1 justify-center mt-5">
+          <span class="font-bold text-xs text-textBlack"
+            >Pas encore de compte ?</span
+          >
+          <NuxtLink to="/register" class="text-blue400 font-bold text-xs"
+            >S'inscrire</NuxtLink
+          >
+        </div>
       </div>
     </div>
   </section>
