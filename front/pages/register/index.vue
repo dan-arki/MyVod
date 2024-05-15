@@ -10,7 +10,7 @@
         <p class="text-gray-900 text-center text-3xl font-bold mb-6">
           Inscription
         </p>
-        <form @submit.prevent="login" class="w-full">
+        <form @submit.prevent="register" class="w-full">
           <input
             class="w-full mb-5 p-3 border bg-white border-gray-300 rounded-2xl text-gray-700"
             v-model="username"
@@ -20,7 +20,7 @@
           />
           <input
             class="w-full mb-5 p-3 border bg-white border-gray-300 rounded-2xl text-gray-700"
-            v-model="password"
+            v-model="email"
             type="email"
             placeholder="Email"
             aria-label="email"
@@ -32,13 +32,21 @@
             placeholder="Password"
             aria-label="Password"
           />
-          <div class="flex-col justify-center items-center gap-2">
-            <p class="text-center text-xl font-bold text-textBlack">
-              Vos Plateformes
-            </p>
-            <div class="flex justify-center items-center gap-2">
-              <img class="platform" src="/logoMyVod.svg" alt="" />
-              <img class="platform" src="/logoMyVod.svg" alt="" />
+          <p class="text-center text-xl font-bold text-textBlack">
+            Vos Plateformes
+          </p>
+          <div class="flex justify-center items-center gap-2">
+            <!-- Liste platformes -->
+            <div
+              class="flex justify-center items-center"
+              v-for="platform in platforms"
+              :key="platform.id"
+            >
+              <img
+                class="platform"
+                :src="platform.logo_url"
+                :alt="platform.title"
+              />
             </div>
           </div>
 
@@ -61,12 +69,57 @@ export default {
   data() {
     return {
       username: "",
+      email: "",
       password: "",
+      platforms: [],
     };
   },
+  mounted() {
+    this.platform();
+  },
   methods: {
-    login() {
-      console.log("Login attempt with", this.username, this.password);
+    async register() {
+      try {
+        const response = await fetch("http://localhost:3333/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: this.username,
+            email: this.email,
+            password: this.password,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to register");
+        }
+
+        this.$router.push("/");
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async platform() {
+      try {
+        const response = await fetch("http://localhost:3333/platform", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to get platforms");
+        }
+
+        const data = await response.json();
+        this.platforms = data;
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };

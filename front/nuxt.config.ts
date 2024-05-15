@@ -1,4 +1,4 @@
-import { defineNuxtConfig  } from '@nuxt/bridge'
+// import { defineNuxtConfig  } from '@nuxt/bridge'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     build: {
     transpile: ['vue3-carousel'],
   },
- 
+  
   
   modules: ["vue3-carousel-nuxt",]
+  
 })

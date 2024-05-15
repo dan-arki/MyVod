@@ -54,7 +54,7 @@ router.post("/watching", auth, async (req, res) => {
   }
 });
 
-router.get('/watching', auth, async (req, res) => {
+router.get("/watching", auth, async (req, res) => {
   const userId = req.auth.id;
   try {
     const watching = await prisma.watching.findMany({

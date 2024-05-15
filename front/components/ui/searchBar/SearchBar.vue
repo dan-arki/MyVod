@@ -3,7 +3,14 @@
   <div
     class="searchBarContainer flex flex-col justify-center items-center self-center"
   >
-    <input type="text" class="searchBar" placeholder="Que cherchez-vous ?" />
+    <div class="flex relative w-full">
+      <input type="text" class="searchBar" placeholder="Que cherchez-vous ?" />
+      <img
+        src="/iconSearch.svg"
+        alt="searchIcon"
+        class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+      />
+    </div>
   </div>
 </template>
 
@@ -19,7 +26,7 @@
   height: 100%;
   padding: 8px 16px; /* Ajoute du padding pour améliorer l'apparence */
   border: solid 1px #8ca1ba;
-  border-radius: 20px; /* Ajoute des coins arrondis */
+  border-radius: 16px; /* Ajoute des coins arrondis */
   font-size: 16px;
   outline: none; /* Supprime le contour par défaut */
 }

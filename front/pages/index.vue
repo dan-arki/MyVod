@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-screen flex flex-col justify-start gap-8">
     <UiSlider></UiSlider>
-    <UiSearchBar></UiSearchBar>
+    <UiSearchBar class="mt-4"></UiSearchBar>
     <!-- Listes nouveautés -->
     <article class="mx-10">
       <UiPostersList></UiPostersList>
