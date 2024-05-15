@@ -10,10 +10,10 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       :items-to-show="1"
       :navigation-enabled="true"
       :pagination-enabled="true"
-      :autoplay="true"
-      :autoplay-timeout="2000"
+      :autoplay="false"
+      :autoplay-timeout="1000000"
       :wrap-around="true"
-      class="h-full w-full"
+      class="h-fit w-full"
     >
       <Slide v-for="video in videos" :key="video.id" class="h-full">
         <video class="w-full h-full object-cover" autoplay muted loop>
@@ -36,7 +36,8 @@ export default {
     return {
       videos: [
         { id: 1, src: "omerVideo.mp4" },
-        { id: 2, src: "danVideoParc.mp4" },
+        // { id: 2, src: "omerVideo.mp4" },
+        // { id: 2, src: "danVideoParc.mp4" },
       ],
     };
   },
@@ -46,25 +47,26 @@ export default {
 <style scoped>
 .carousel-container {
   width: 100%;
-  height: calc(100vh - 0px);
+  height: fit-content;
   padding: 0;
   position: relative;
 }
 
 .carousel-container .carousel {
-  height: 100%;
+  height: fit-content;
 }
 
 .carousel-container .carousel .slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: fit-content;
 }
 
 video {
   width: 100%;
   height: 100%;
+  max-height: 100vh;
   object-fit: cover;
 }
 </style>
