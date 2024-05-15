@@ -91,60 +91,14 @@
       "public/*": [
         "../public/*"
       ],
-      "#ui-pro": [
-        "../node_modules/@nuxt/ui-pro"
-      ],
-      "#ui-pro/*": [
-        "../node_modules/@nuxt/ui-pro/*"
-      ],
       "vue3-carousel/dist/carousel": [
         "./vue3-carousel/dist/carousel.es"
-      ],
-      "#ui": [
-        "../node_modules/@nuxt/ui/dist/runtime"
-      ],
-      "#ui/*": [
-        "../node_modules/@nuxt/ui/dist/runtime/*"
-      ],
-      "#ui-colors": [
-        "./ui.colors"
-      ],
-      "#icon-collections": [
-        "./icon-collections"
-      ],
-      "#color-mode-options": [
-        "./color-mode-options"
-      ],
-      "#mdc-configs": [
-        "./mdc-configs"
-      ],
-      "#mdc-highlighter": [
-        "./mdc-highlighter"
-      ],
-      "#mdc-imports": [
-        "./mdc-imports"
-      ],
-      "#tailwind-config": [
-        "./tailwind.config"
-      ],
-      "#tailwind-config/*": [
-        "./tailwind.config/*"
-      ],
-      "#content/server": [
-        "../node_modules/@nuxt/content/dist/runtime/legacy/server"
       ]
     }
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
-    "../node_modules/@nuxt/ui-pro/modules/pro/runtime/server",
     "../node_modules/vue3-carousel-nuxt/runtime/server",
-    "../node_modules/nuxt-icon/runtime/server",
-    "../node_modules/@nuxtjs/color-mode/runtime/server",
-    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
-    "../node_modules/@nuxt/ui/runtime/server",
-    "../node_modules/@nuxtjs/mdc/runtime/server",
-    "../node_modules/@nuxt/content/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
@@ -155,7 +109,6 @@
     "../node_modules",
     "../../node_modules",
     "../node_modules/nuxt/node_modules",
-    "../node_modules/@nuxt/ui-pro/modules/pro/node_modules",
     "../dist"
   ]
 }

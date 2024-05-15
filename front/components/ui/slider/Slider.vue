@@ -10,8 +10,6 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       :items-to-show="1"
       :navigation-enabled="true"
       :pagination-enabled="true"
-      :autoplay="false"
-      :autoplay-timeout="1000000"
       :wrap-around="true"
       class="h-fit w-full"
     >

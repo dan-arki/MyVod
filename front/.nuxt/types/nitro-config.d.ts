@@ -3,9 +3,9 @@
 // App Config
 import type { Defu } from 'defu'
 
-import type { default as appConfig0 } from "/Users/dan/Desktop/ESD-DAN/MyVod/front/node_modules/@nuxt/ui-pro/app.config";
 
-type UserAppConfig = Defu<{}, [typeof appConfig0]>
+
+type UserAppConfig = Defu<{}, []>
 
 declare module 'nitropack' {
   interface AppConfig extends UserAppConfig {}

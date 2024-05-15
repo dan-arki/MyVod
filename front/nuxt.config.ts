@@ -18,6 +18,6 @@ export default defineNuxtConfig({
     transpile: ['vue3-carousel'],
   },
  
-  extends: ['@nuxt/ui-pro'],
-  modules: ["vue3-carousel-nuxt",'@nuxt/ui','@nuxt/content']
+  
+  modules: ["vue3-carousel-nuxt",]
 })
