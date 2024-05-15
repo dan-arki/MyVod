@@ -1,6 +1,8 @@
 <template>
   <!-- <UContentSearchButton class="searchBar" label="Que cherchez vous ?" /> -->
-  <div class="searchBarContainer">
+  <div
+    class="searchBarContainer flex flex-col justify-center items-center self-center"
+  >
     <input type="text" class="searchBar" placeholder="Que cherchez-vous ?" />
   </div>
 </template>
