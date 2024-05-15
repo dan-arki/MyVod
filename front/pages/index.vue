@@ -12,8 +12,8 @@
     </article>
 
     <!-- Liste trailers -->
-    <article class="flex flex-col gap-4 mx-10">
-      <h2 class="font-semibold text-5xl self-center">Trailers</h2>
+    <article class="flex flex-col gap-8 mx-10">
+      <h2 class="font-semibold text-5xl self-center text-white">Trailers</h2>
       <UiTrailersList></UiTrailersList>
     </article>
   </section>
