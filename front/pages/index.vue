@@ -18,12 +18,12 @@
 
     <!-- Listes nouveautés -->
     <article class="mx-10">
-      <UiPostersList></UiPostersList>
+      <UiPostersList :titleText="'Nouveautés'"></UiPostersList>
     </article>
 
     <!-- Listes plus populaires -->
     <article class="mx-10">
-      <UiPostersList></UiPostersList>
+      <UiPostersList :titleText="'Les plus populaires'"></UiPostersList>
     </article>
 
     <!-- Liste trailers -->
