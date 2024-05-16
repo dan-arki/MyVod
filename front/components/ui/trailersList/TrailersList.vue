@@ -3,7 +3,7 @@
     <div
       v-for="trailer in selectedTrailers"
       :key="trailer.id"
-      class="w-96 h-60 rounded-lg border overflow-hidden hover:shadow-blue transition duration-300 ease-in-out"
+      class="w-96 h-60 rounded-lg overflow-hidden hover:shadow-blue transition duration-300 ease-in-out"
     >
       <iframe
         class="w-full h-full object-cover"
