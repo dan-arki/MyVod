@@ -5,7 +5,6 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 <template>
   <section class="carousel-container">
-    <UiHeader></UiHeader>
     <Carousel
       :items-to-show="1"
       :navigation-enabled="true"

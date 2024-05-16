@@ -36,7 +36,9 @@ import btnPrimary from "../../components/ui/btnPrimary";
           <span class="font-bold text-xs text-textBlack"
             >Pas encore de compte ?</span
           >
-          <NuxtLink to="/register" class="text-blue400 font-bold text-xs"
+          <NuxtLink
+            to="/register"
+            class="text-blue400 font-bold text-xs hover:underline"
             >S'inscrire</NuxtLink
           >
         </div>

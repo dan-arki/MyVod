@@ -1,11 +1,26 @@
 <template>
+  <UiHeader></UiHeader>
   <section class="min-h-screen flex flex-col justify-start gap-8">
+    <!-- Slider -->
     <UiSlider></UiSlider>
+
+    <!-- Barre de recherche -->
     <UiSearchBar class="mt-4"></UiSearchBar>
+
+    <!-- Filtres -->
+    <div class="flex justify-between mx-10">
+      <UiPlatformTag></UiPlatformTag>
+      <div class="flex gap-4">
+        <UiTag :tagText="'Films'"></UiTag>
+        <UiTag :tagText="'Séries'"></UiTag>
+      </div>
+    </div>
+
     <!-- Listes nouveautés -->
     <article class="mx-10">
       <UiPostersList></UiPostersList>
     </article>
+
     <!-- Listes plus populaires -->
     <article class="mx-10">
       <UiPostersList></UiPostersList>

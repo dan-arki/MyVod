@@ -32,18 +32,19 @@
             placeholder="Password"
             aria-label="Password"
           />
+
+          <!-- Liste platformes -->
           <p class="text-center text-xl font-bold text-textBlack">
             Vos Plateformes
           </p>
-          <div class="flex justify-center items-center gap-2">
-            <!-- Liste platformes -->
+          <div class="flex justify-center items-center gap-4">
             <div
-              class="flex justify-center items-center"
+              class="flex justify-center items-center mb-8"
               v-for="platform in platforms"
               :key="platform.id"
             >
               <img
-                class="platform"
+                class="platform cursor-pointer mt-4"
                 :src="platform.logo_url"
                 :alt="platform.title"
               />
@@ -55,7 +56,9 @@
         </form>
         <div class="flex gap-1 justify-center mt-5">
           <span class="font-bold text-xs text-textBlack">Déjà un compte ?</span>
-          <NuxtLink to="/login" class="text-blue400 font-bold text-xs"
+          <NuxtLink
+            to="/login"
+            class="text-blue400 font-bold text-xs hover:underline"
             >Se connecter</NuxtLink
           >
         </div>
@@ -127,7 +130,7 @@ export default {
 
 <style scoped>
 .platform {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 30px;
 }
 </style>

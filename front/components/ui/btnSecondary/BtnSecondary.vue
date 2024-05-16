@@ -1,7 +1,7 @@
 <template>
   <button
     :class="buttonSizeClass"
-    class="w-full bg-whiteButton text-blue400 p-3 rounded-2xl mt-4 font-semibold transition duration-300 ease-in-out hover:shadow-blue"
+    class="w-full bg-whiteButton text-blue400 p-3 rounded-2xl font-semibold transition duration-300 ease-in-out hover:shadow-blue"
     type="submit"
   >
     {{ btnText }}

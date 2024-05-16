@@ -1,7 +1,7 @@
 <template>
   <!-- header -->
   <header
-    class="flex justify-between w-full items-center px-8 py-2 mt-2 z-10 absolute"
+    class="flex justify-between w-full items-center px-8 py-2 mt-4 z-10 fixed top-0"
   >
     <NuxtLink to="/">
       <img class="w-28 h-28" src="/logoMyVod.svg" alt="logo" to="/" />
