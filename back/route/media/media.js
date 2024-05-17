@@ -37,7 +37,15 @@ router.get("/media/:id", async (req, res) => {
       },
       include: {
         platforms: { select: { platform: true } },
-        categories: true,
+        categories: {
+          select: {
+            categorie: {
+              select: {
+                title: true,
+              },
+            },
+          },
+        },
         actor: { select: { actor: true } },
         season: {
           include: {

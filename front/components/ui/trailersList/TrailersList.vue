@@ -6,8 +6,9 @@
       class="w-96 h-60 rounded-lg overflow-hidden hover:shadow-blue transition duration-300 ease-in-out"
     >
       <iframe
+        allow="autoplay"
         class="w-full h-full object-cover"
-        controls
+        frameborder="0"
         :src="getYoutubeEmbededUrl(trailer.trailer_url)"
       >
         Your browser does not support the video tag.
@@ -50,6 +51,11 @@ export default {
     getYoutubeEmbededUrl(url) {
       const videoId = url.split("v=")[1];
       return `https://www.youtube.com/embed/${videoId}`;
+    },
+
+    getYoutubeAutoplay(url) {
+      const videoId = url.split("v=")[1];
+      return `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`;
     },
 
     selectRandomTrailers() {

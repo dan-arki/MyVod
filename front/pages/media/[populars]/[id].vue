@@ -19,11 +19,23 @@ import { useRoute } from "vue-router";
                 class="w-full h-full object-cover rounded-xl"
               />
             </div>
-            <span
-              class="categoriesDuration font-semibold text-[#eaeff5] text-left w-full h-[21px]"
-            >
-              Categories - {{ media.duration }} min</span
-            >
+
+            <div class="flex flex-col gap-1">
+              <h3 class="text-white font-semibold">Catégorie(s) :</h3>
+              <span
+                v-for="categorie in media.categories"
+                class="text-neutral text-left w-full h-[21px]"
+              >
+                {{ categorie.categorie.title }}</span
+              >
+
+              <div class="flex flex-col">
+                <h3 class="text-white font-semibold">Durée :</h3>
+                <span class="text-neutral text-left w-full h-[21px]">
+                  {{ media.duration }} min</span
+                >
+              </div>
+            </div>
           </div>
           <div class="gap-8 flex-col items-start p-2.5 flex">
             <div
@@ -67,12 +79,15 @@ import { useRoute } from "vue-router";
                 }}</span>
               </div>
             </div>
-            <div class="gap-2.5 flex-col items-start flex">
-              <!-- <img
-                src="/images/paramountLogo1.png"
-                onerror="this.src='http://svgur.com/i/x4x.svg'"
-                class="paramountLogo1 w-[77.11px] h-12 relative object-cover "
-              /> -->
+            <div
+              class="gap-2.5 items-start flex"
+              v-for="(platform, index) in media.platforms"
+              :key="index"
+            >
+              <img
+                :src="platform.platform.logo_url"
+                class="platform relative object-cover"
+              />
             </div>
           </div>
         </div>
@@ -151,3 +166,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.platform {
+  width: 80px;
+  height: 30px;
+  object-fit: contain;
+}
+</style>
