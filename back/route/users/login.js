@@ -17,21 +17,21 @@ router.post("/login", async (req, res) => {
       message: error,
     });
   }
-// on vérifie dans la base si il y est déjà
+  // on vérifie dans la base si il y est déjà
   const user = await prisma.user.findFirst({
     where: { email: userdata.email },
   });
 
-  // si il esy présent dans la base 
+  // si il esy présent dans la base
   if (user) {
-    // on compare les mots de passe 
+    // on compare les mots de passe
     const comparePassword = await bcrypt.compare(
       userdata.password,
       user.password
     );
-// si ils sont identiques
+    // si ils sont identiques
     if (comparePassword) {
-      // alors on signe le token 
+      // alors on signe le token
       res.json({
         token: jwt.sign(
           {
@@ -44,13 +44,13 @@ router.post("/login", async (req, res) => {
         ),
       });
     } else {
-      // sinon on renvoire une erreur 
+      // sinon on renvoire une erreur
       res.status(400).json({
         message: "Email ou Mot de passe invalide",
       });
     }
   } else {
-    // si le user existe pas  on renvoire une erreur 
+    // si le user existe pas  on renvoire une erreur
     res.status(400).json({
       message: "Email ou Mot de passe invalide",
     });

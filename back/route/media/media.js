@@ -1,13 +1,12 @@
 import express from "express";
 import { PrismaClient } from "@prisma/client";
-
 const prisma = new PrismaClient();
 const router = express.Router();
 
 // Récupérer tous les médias avec les noms des acteurs
 router.get("/media", async (req, res) => {
   try {
-    const media = await prisma.media.findMany({   
+    const media = await prisma.media.findMany({
       include: {
         platforms: { select: { platform: true } },
         categories: true,
@@ -29,16 +28,24 @@ router.get("/media", async (req, res) => {
   }
 });
 
-router.get('/media/:id', async (req, res) => {
-  const id = parseInt(req.params.id)
+router.get("/media/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
   try {
     const resp = await prisma.media.findFirst({
-      where : {
-        id : id
+      where: {
+        id: id,
       },
       include: {
         platforms: { select: { platform: true } },
-        categories: true,
+        categories: {
+          select: {
+            categorie: {
+              select: {
+                title: true,
+              },
+            },
+          },
+        },
         actor: { select: { actor: true } },
         season: {
           include: {
@@ -46,13 +53,13 @@ router.get('/media/:id', async (req, res) => {
           },
         },
         Rating: true,
-      }
-    })
-    return res.json(resp)
+      },
+    });
+    return res.json(resp);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-})
+});
 // Récupérer les médias en fonction de la plateforme avec les noms des acteurs
 router.get("/media/:platformId", async (req, res) => {
   const platformId = parseInt(req.params.platformId);

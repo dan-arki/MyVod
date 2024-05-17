@@ -11,10 +11,12 @@ router.post("/register", async (req, res) => {
   let userdata;
   try {
     // on récupère les informations de l'utilisateur
+    console.log("req.body", req.body);
     userdata = formValidation.parse(req.body);
   } catch (error) {
+    console.log("error", error.issues);
     return res.status(400).json({
-      message: error,
+      error: error.issues,
     });
   }
 

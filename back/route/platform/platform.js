@@ -39,7 +39,7 @@ router.post("/platform", auth, async (req, res) => {
         },
       });
       if (existingUserPlatform) {
-        return res.json({ message: "plateforme deja ajoute" });
+        return res.json({ message: "plateforme déjà ajoutée" });
       } else {
         await prisma.user_Platform.create({
           data: {
@@ -47,7 +47,7 @@ router.post("/platform", auth, async (req, res) => {
             platformId: data.id,
           },
         });
-        return res.json({ message: "plateforme ajoute avec succes" });
+        return res.json({ message: "plateforme ajoutée avec succes" });
       }
     }
   } catch (error) {
