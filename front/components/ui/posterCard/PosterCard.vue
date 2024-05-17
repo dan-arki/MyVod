@@ -5,6 +5,7 @@
         v-for="poster in posters"
         :key="poster.id"
         class="w-36 h-48 rounded-lg flex flex-col items-start cursor-pointer hover:shadow-blue transition duration-300 ease-in-out"
+        @click="getPosterById(poster.id, poster.title)"
       >
         <img
           :src="poster.photo_url"
@@ -46,6 +47,10 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+
+    getPosterById(id, title) {
+      this.$router.push(`/media/${id}/${title}`);
     },
   },
 };

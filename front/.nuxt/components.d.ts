@@ -1,8 +1,10 @@
 
 interface _GlobalComponents {
-      'UiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
+      'UiActorCol': typeof import("../components/ui/actorCol/ActorCol.vue")['default']
+    'UiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
     'UiBtnSecondary': typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
     'UiHeader': typeof import("../components/ui/header/Header.vue")['default']
+    'UiLoader': typeof import("../components/ui/loader/Loader.vue")['default']
     'UiPlatformCircle': typeof import("../components/ui/platformCircle/PlatformCircle.vue")['default']
     'UiPlatformTag': typeof import("../components/ui/platformTag/PlatformTag.vue")['default']
     'UiPlatformsList': typeof import("../components/ui/platformsList/PlatformsList.vue")['default']
@@ -37,9 +39,11 @@ interface _GlobalComponents {
     'Head': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
-      'LazyUiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
+      'LazyUiActorCol': typeof import("../components/ui/actorCol/ActorCol.vue")['default']
+    'LazyUiBtnPrimary': typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
     'LazyUiBtnSecondary': typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
     'LazyUiHeader': typeof import("../components/ui/header/Header.vue")['default']
+    'LazyUiLoader': typeof import("../components/ui/loader/Loader.vue")['default']
     'LazyUiPlatformCircle': typeof import("../components/ui/platformCircle/PlatformCircle.vue")['default']
     'LazyUiPlatformTag': typeof import("../components/ui/platformTag/PlatformTag.vue")['default']
     'LazyUiPlatformsList': typeof import("../components/ui/platformsList/PlatformsList.vue")['default']
@@ -88,9 +92,11 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const UiActorCol: typeof import("../components/ui/actorCol/ActorCol.vue")['default']
 export const UiBtnPrimary: typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
 export const UiBtnSecondary: typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
 export const UiHeader: typeof import("../components/ui/header/Header.vue")['default']
+export const UiLoader: typeof import("../components/ui/loader/Loader.vue")['default']
 export const UiPlatformCircle: typeof import("../components/ui/platformCircle/PlatformCircle.vue")['default']
 export const UiPlatformTag: typeof import("../components/ui/platformTag/PlatformTag.vue")['default']
 export const UiPlatformsList: typeof import("../components/ui/platformsList/PlatformsList.vue")['default']
@@ -125,9 +131,11 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+export const LazyUiActorCol: typeof import("../components/ui/actorCol/ActorCol.vue")['default']
 export const LazyUiBtnPrimary: typeof import("../components/ui/btnPrimary/BtnPrimary.vue")['default']
 export const LazyUiBtnSecondary: typeof import("../components/ui/btnSecondary/BtnSecondary.vue")['default']
 export const LazyUiHeader: typeof import("../components/ui/header/Header.vue")['default']
+export const LazyUiLoader: typeof import("../components/ui/loader/Loader.vue")['default']
 export const LazyUiPlatformCircle: typeof import("../components/ui/platformCircle/PlatformCircle.vue")['default']
 export const LazyUiPlatformTag: typeof import("../components/ui/platformTag/PlatformTag.vue")['default']
 export const LazyUiPlatformsList: typeof import("../components/ui/platformsList/PlatformsList.vue")['default']
