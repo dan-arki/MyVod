@@ -4,7 +4,7 @@
       <div
         v-for="poster in posters"
         :key="poster.id"
-        class="w-36 h-48 rounded-lg flex flex-col items-start"
+        class="w-36 h-48 rounded-lg flex flex-col items-start cursor-pointer hover:shadow-blue transition duration-300 ease-in-out"
       >
         <img
           :src="poster.photo_url"
